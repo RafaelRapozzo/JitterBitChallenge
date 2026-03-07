@@ -1,59 +1,113 @@
-API de Integração - Desafio Jitterbit
+<div align="center">
+<img src="https://www.google.com/search?q=https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" />
+<h1>🚀 Jitterbit Integration Challenge</h1>
+<p><strong>API de Integração com Mapeamento de Dados e Persistência</strong></p>
 
-Esta API foi desenvolvida para o processo seletivo de Analista de Sistemas Júnior. O foco principal é a integração de dados entre um sistema legado (JSON de entrada) e uma base de dados moderna (SQLite via Prisma).
+</div>
 
-🧠 Lógica de Integração (Mapping)
+📋 Sobre o Projeto
 
-A API recebe dados num formato específico e transforma-os antes da persistência. Abaixo está a tabela de tradução de campos implementada no OrdersService:
+Esta API foi desenvolvida como parte do processo seletivo para Analista de Sistemas Júnior. O objetivo é servir como uma ponte de integração, recebendo dados em um formato legado (JSON em português) e transformando-os em um modelo moderno e tipado (em inglês) para persistência.
 
-JSON Original (Entrada)
+🧠 Data Transformation (Mapping)
 
-Campo no Banco de Dados
+O coração deste projeto é o mapeamento de campos realizado na camada de serviço. Esta lógica garante que sistemas distintos possam se comunicar perfeitamente.
+
+📥 JSON de Entrada (Legado)
+
+📤 Base de Dados (Moderno)
+
+Tipo
 
 numeroPedido
 
-orderId (PK)
+orderId
+
+String (PK)
 
 valorTotal
 
 value
 
+Float
+
 dataCriacao
 
 creationDate
+
+DateTime
 
 items.idItem
 
 productId
 
+Int
+
 items.quantidadeItem
 
 quantity
+
+Int
 
 items.valorItem
 
 price
 
-🛠️ Tecnologias
+Float
 
-Framework: NestJS
+🛠️ Configuração e Instalação
 
-ORM: Prisma (v7+)
+Siga os passos abaixo para rodar o projeto localmente no seu Windows 11:
 
-Base de Dados: SQLite
+Clonar e Instalar
 
-Documentação: Swagger (disponível em /api)
+git clone [https://github.com/SEU_USUARIO/SEU_REPO.git](https://github.com/SEU_USUARIO/SEU_REPO.git)
+cd SEU_REPO
+npm install
 
-🚀 Como testar
 
-Clone o repositório.
+Banco de Dados (SQLite)
+O projeto utiliza a versão 6 do Prisma para máxima portabilidade.
 
-Instale as dependências: npm install.
+npx prisma migrate dev --name init
 
-Configure a URL no .env: DATABASE_URL="file:./dev.db".
 
-Execute as migrações: npx prisma migrate dev.
+# Execução
 
-Inicie a API: npm run start:dev.
+npm run start:dev
 
-Use o Swagger em http://localhost:3000/api para enviar o JSON de teste.
+
+🧪 Testes Unitários (Opcional Implementado)
+
+A lógica de mapeamento foi validada através de testes automatizados para garantir a integridade da integração.
+
+# Executar todos os testes
+npm run test
+
+# Executar em modo watch
+npm run test:watch
+
+
+📖 Documentação Interativa
+
+Uma vez que a aplicação esteja rodando, você pode testar todos os endpoints através do Swagger UI:
+
+👉 http://localhost:3000/api
+
+Dica: No Swagger, utilize a opção "Try it out" no endpoint POST /orders para ver o mapeamento em tempo real.
+
+🏗️ Arquitetura Resumida
+
+Controllers: Gerenciamento de rotas e documentação Swagger.
+
+Services: Onde reside a lógica de negócio e o mapping dos dados.
+
+Prisma: Camada de persistência segura e tipada.
+
+DTOs: Definição rigorosa da estrutura de dados de entrada.
+
+Docker: Containerização para facilitar o deploy e escalabilidade.
+
+<div align="center">
+<sub>Desenvolvido com ❤️ para o processo seletivo Jitterbit.</sub>
+</div>
