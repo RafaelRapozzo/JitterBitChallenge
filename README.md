@@ -1,5 +1,4 @@
 <div align="center">
-<img src="https://www.google.com/search?q=https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" />
 <h1>🚀 Jitterbit Integration Challenge</h1>
 <p><strong>API de Integração com Mapeamento de Dados e Persistência</strong></p>
 
