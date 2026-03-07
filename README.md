@@ -60,8 +60,8 @@ Siga os passos abaixo para rodar o projeto localmente no seu Windows 11:
 
 Clonar e Instalar
 
-git clone [https://github.com/SEU_USUARIO/SEU_REPO.git](https://github.com/SEU_USUARIO/SEU_REPO.git)
-cd SEU_REPO
+git clone [https://github.com/RafaelRapozzo/JitterBitChallenge.git](https://github.com/RafaelRapozzo/JitterBitChallenge.git)
+cd challenge-api
 npm install
 
 
