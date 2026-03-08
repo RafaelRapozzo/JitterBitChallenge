@@ -71,7 +71,15 @@ Windows 11):
 > \[https://github.com/RafaelRapozzo/JitterBitChallenge.git\](https://githu
 > cd challenge-api npm install
 
+<<<<<<< HEAD
 **2.** **Configurar** **Variáveis** **de** **Ambiente**
+=======
+git clone [https://github.com/RafaelRapozzo/JitterBitChallenge.git](https://github.com/RafaelRapozzo/JitterBitChallenge.git)
+
+cd challenge-api
+
+npm install
+>>>>>>> d9ad4375076e254137c909ce99f5f8330e905285
 
 Crie um arquivo chamado .env na raiz do projeto e adicione a URL do
 banco SQLite:
