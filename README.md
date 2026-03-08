@@ -71,7 +71,7 @@ Windows 11):
 > \[https://github.com/RafaelRapozzo/JitterBitChallenge.git\](https://githu
 > cd challenge-api npm install
 
-<<<<<<< HEAD
+
 **2.** **Configurar** **Variáveis** **de** **Ambiente**
 =======
 git clone [https://github.com/RafaelRapozzo/JitterBitChallenge.git](https://github.com/RafaelRapozzo/JitterBitChallenge.git)
