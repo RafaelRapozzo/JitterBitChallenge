@@ -1,112 +1,130 @@
-<div align="center">
-<h1>🚀 Jitterbit Integration Challenge</h1>
-<p><strong>API de Integração com Mapeamento de Dados e Persistência</strong></p>
+> 🚀 **Jitterbit** **Integration** **Challenge**
 
-</div>
+**API** **de** **Integração** **com** **Mapeamento** **de** **Dados**
+**e** **Persistência**
 
-📋 Sobre o Projeto
+📋**Sobre** **o** **Projeto**
 
-Esta API foi desenvolvida como parte do processo seletivo para Analista de Sistemas Júnior. O objetivo é servir como uma ponte de integração, recebendo dados em um formato legado (JSON em português) e transformando-os em um modelo moderno e tipado (em inglês) para persistência.
+Esta API foi desenvolvida como parte do processo seletivo para
+**Analista** **de** **Sistemas** **Júnior**. O objetivo principal é
+atuar como uma camada de integração (Middleware), recebendo dados em um
+formato legado (JSON em português) e transformando-os em um modelo
+moderno, tipado e padronizado em inglês para persistência em base de
+dados.
 
-🧠 Data Transformation (Mapping)
+🧠 **Data** **Transformation** **(Mapping)**
 
-O coração deste projeto é o mapeamento de campos realizado na camada de serviço. Esta lógica garante que sistemas distintos possam se comunicar perfeitamente.
+O coração deste projeto é a camada de serviço, onde ocorre o mapeamento
+de campos. Essa lógica garante que sistemas distintos com nomenclaturas
+diferentes se comuniquem perfeitamente.
 
-📥 JSON de Entrada (Legado)
+> **De** **(JSON** **Legado)**
+>
+> numeroPedido
+>
+> valorTotal
+>
+> dataCriacao
+>
+> items.idItem
+>
+> items.quantidadeItem
+>
+> items.valorItem
 
-📤 Base de Dados (Moderno)
+🛠 **Configuração** **e** **Instalação**
 
-Tipo
+**Para** **(Base** **de** **Dados)**
 
-numeroPedido
+> orderId
+>
+> value
+>
+> creationDate
+>
+> productId
+>
+> quantity
+>
+> price
 
-orderId
+**Tipo**
 
 String (PK)
 
-valorTotal
-
-value
-
 Float
-
-dataCriacao
-
-creationDate
 
 DateTime
 
-items.idItem
-
-productId
-
 Int
 
-items.quantidadeItem
-
-quantity
-
 Int
-
-items.valorItem
-
-price
 
 Float
 
-🛠️ Configuração e Instalação
+Siga os passos abaixo para rodar o projeto localmente (Testado em
+Windows 11):
 
-Siga os passos abaixo para rodar o projeto localmente no seu Windows 11:
+**1.** **Clonar** **e** **Instalar**
 
-Clonar e Instalar
+> git clone
+> \[https://github.com/RafaelRapozzo/JitterBitChallenge.git\](https://githu
+> cd challenge-api npm install
 
-git clone [https://github.com/RafaelRapozzo/JitterBitChallenge.git](https://github.com/RafaelRapozzo/JitterBitChallenge.git)
-cd challenge-api
-npm install
+**2.** **Configurar** **Variáveis** **de** **Ambiente**
 
+Crie um arquivo chamado .env na raiz do projeto e adicione a URL do
+banco SQLite:
 
-Banco de Dados (SQLite)
-O projeto utiliza a versão 6 do Prisma para máxima portabilidade.
+> DATABASE_URL="file:./dev.db"
 
-npx prisma migrate dev --name init
+**3.** **Banco** **de** **Dados** **(Prisma** **&** **SQLite)**
 
+Utilizei o **Prisma** **6** para garantir portabilidade. Execute os
+comandos para gerar o cliente e rodar as migrações:
 
-# Execução
+> npx prisma generate
+>
+> npx prisma migrate dev --name init
 
-npm run start:dev
+**4.** **Execução**
 
+> \# Modo de desenvolvimento npm run start:dev
 
-🧪 Testes Unitários (Opcional Implementado)
+🧪 **Testes** **Automatizados**
 
-A lógica de mapeamento foi validada através de testes automatizados para garantir a integridade da integração.
+A lógica de mapeamento e os endpoints foram validados com testes para
+garantir a integridade da integração.
 
-# Executar todos os testes
-npm run test
+> \# Executar todos os testes npm run test
+>
+> \# Executar em modo watch npm run test:watch
 
-# Executar em modo watch
-npm run test:watch
+📖 **Documentação** **Interativa** **(Swagger)**
 
+Com a aplicação rodando, aceda à documentação completa e teste os
+endpoints em tempo real:
 
-📖 Documentação Interativa
+> 👉
+> [**<u>http://localhost:3000/api</u>**](https://www.google.com/search?q=http://localhost:3000/api)
+>
+> **Dica:** No Swagger, utilize a opção **"Try** **it** **out"** no
+> endpoint POST /orders para observar o mapeamento de dados automático.
 
-Uma vez que a aplicação esteja rodando, você pode testar todos os endpoints através do Swagger UI:
+🏗 **Arquitetura** **do** **Sistema**
 
-👉 http://localhost:3000/api
+> **NestJS:** Framework base para uma estrutura modular e escalável.
+>
+> **TypeScript:** Garantia de tipagem estática e redução de bugs em
+> tempo de desenvolvimento.
+>
+> **Controllers:** Gestão de rotas e documentação.
+>
+> **Services:** Camada onde reside a inteligência do **Mapping** e
+> regras de negócio.
+>
+> **Prisma** **ORM:** Persistência de dados segura e performática.
+>
+> **DTOs:** Validação rigorosa dos dados de entrada (Payload).
 
-Dica: No Swagger, utilize a opção "Try it out" no endpoint POST /orders para ver o mapeamento em tempo real.
-
-🏗️ Arquitetura Resumida
-
-Controllers: Gerenciamento de rotas e documentação Swagger.
-
-Services: Onde reside a lógica de negócio e o mapping dos dados.
-
-Prisma: Camada de persistência segura e tipada.
-
-DTOs: Definição rigorosa da estrutura de dados de entrada.
-
-Docker: Containerização para facilitar o deploy e escalabilidade.
-
-<div align="center">
-<sub>Desenvolvido com ❤️ para o processo seletivo Jitterbit.</sub>
-</div>
+Desenvolvido com ❤ para o processo seletivo **Jitterbit**.
